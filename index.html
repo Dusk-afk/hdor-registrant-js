@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="horizontal-container">
+      <div class="pane registration">
+        <h1>Registration Form</h1>
+        <div class="divider-horizontal"></div>
+        <form id="registrationForm">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            class="form-control"
+            required
+          />
+          <div class="spacer-vertical"></div>
+
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            required
+          />
+          <div class="spacer-vertical"></div>
+
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            required
+          />
+          <div class="spacer-vertical"></div>
+
+          <!-- Plan Selection -->
+          <label class="form-label">Plan</label><br />
+          <div class="form-check">
+            <input
+              type="radio"
+              id="plan1"
+              name="plan"
+              value="Plan 1"
+              class="form-check-input"
+              required
+            />
+            <label for="plan1" class="form-check-label">Registration Fee</label
+            ><br />
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="plan2"
+              name="plan"
+              value="Plan 2"
+              class="form-check-input"
+            />
+            <label for="plan2" class="form-check-label"
+              >Registration + Finisher Medal</label
+            ><br />
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="plan3"
+              name="plan"
+              value="Plan 3"
+              class="form-check-input"
+            />
+            <label for="plan3" class="form-check-label"
+              >Registration + T-shirt</label
+            ><br />
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="plan4"
+              name="plan"
+              value="Plan 4"
+              class="form-check-input"
+            />
+            <label for="plan4" class="form-check-label"
+              >Registration + Finisher Medal + T-shirt</label
+            ><br />
+          </div>
+          <div class="spacer-vertical"></div>
+
+          <label for="isMale" class="form-label">Gender</label>
+          <div class="horizontal-container">
+            <div class="form-check">
+              <input
+                type="radio"
+                id="isMale"
+                name="gender"
+                value="male"
+                class="form-check-input"
+                required
+              />
+              <label for="isMale" class="form-check-label">Male</label>
+            </div>
+            <div class="spacer-horizontal"></div>
+            <div class="form-check">
+              <input
+                type="radio"
+                id="isFemale"
+                name="gender"
+                value="female"
+                class="form-check-input"
+              />
+              <label for="isFemale" class="form-check-label">Female</label
+              ><br />
+            </div>
+          </div>
+          <div class="spacer-vertical"></div>
+
+          <!-- Address Fields -->
+          <label for="address1" class="form-label">Address Line 1</label>
+          <input
+            type="text"
+            id="address1"
+            name="address1"
+            class="form-control"
+            required
+          />
+          <div class="spacer-vertical"></div>
+
+          <label for="country" class="form-label">Country</label>
+          <select id="country" name="country" class="form-control" required>
+            <option value="India" selected>India</option>
+          </select>
+          <div class="spacer-vertical"></div>
+
+          <label for="state" class="form-label">State</label>
+          <select id="state" name="state" class="form-control" required>
+            <option value="">Select State</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+          <div class="spacer-vertical"></div>
+
+          <label for="city" class="form-label">City</label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            class="form-control"
+            required
+          />
+          <div class="spacer-vertical"></div>
+
+          <label for="pincode" class="form-label">Pincode</label>
+          <input
+            type="text"
+            id="pincode"
+            name="pincode"
+            class="form-control"
+            required
+          />
+          <div class="spacer-vertical"></div>
+
+          <label for="mobile" class="form-label">Mobile</label>
+          <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            class="form-control"
+            required
+          />
+          <div class="spacer-vertical"></div>
+
+          <div id="tshirtSizeField" style="display: none">
+            <label for="tshirtSize" class="form-label">T-Shirt Size</label>
+            <select
+              id="tshirtSize"
+              name="tshirtSize"
+              class="form-control"
+              required
+            >
+              <option value="">Select Size</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="2XL">2XL</option>
+              <option value="3XL">3XL</option>
+            </select>
+          </div>
+          <br />
+
+          <label for="photo" class="form-label">Photo Path</label>
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+            class="form-control"
+            required
+          /><br />
+
+          <button id="submit-btn" type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </form>
+      </div>
+
+      <div class="spacer-horizontal"></div>
+
+      <div class="pane logs">
+        <h1>Progress</h1>
+        <div class="divider-horizontal"></div>
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="Basic example"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="spacer-vertical"></div>
+        <div id="logWindow"></div>
+      </div>
+    </div>
+
+    <div style="z-index: 999999; position: fixed; bottom: 0; right: 0">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          margin: 10px;
+        "
+      >
+        <img
+          src="data:image/png;base64,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"
+          alt=""
+          width="60"
+        />
+        <div style="margin-bottom: 5px"></div>
+        <span style="font-size: 16px; color: #333; font-weight: 500"
+          >By Piyush 🚀</span
+        >
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+          // Handle form submission with JavaScript
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData.entries());
+          data["isMale"] = data["gender"] === "male";
+          // Get the index selected for plan
+          data["plan"] = Array.from(
+            document.querySelectorAll('input[name="plan"]')
+          ).findIndex((input) => input.checked);
+          data.address2 = "";
+          data.landmark = "";
+
+          console.log(data); // Log form data to console
+          register(
+            data.fullName,
+            data.email,
+            data.password,
+            data.plan,
+            data.isMale,
+            data.address1,
+            data.address2,
+            data.country,
+            data.state,
+            data.city,
+            data.landmark,
+            data.pincode,
+            data.mobile,
+            data.tshirtSize,
+            data.photo
+          );
+
+          // Now you can send the data to your backend API for further processing
+        });
+
+      // Function to show/hide T-shirt size field based on selected plan
+      document
+        .querySelectorAll('input[name="plan"]')
+        .forEach(function (planInput) {
+          planInput.addEventListener("change", function () {
+            const tshirtSizeField = document.getElementById("tshirtSizeField");
+            const tshirtSizeSelect = document.getElementById("tshirtSize");
+            if (this.value === "Plan 3" || this.value === "Plan 4") {
+              tshirtSizeField.style.display = "block";
+              tshirtSizeSelect.required = true;
+            } else {
+              tshirtSizeField.style.display = "none";
+              tshirtSizeSelect.required = false;
+            }
+          });
+        });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

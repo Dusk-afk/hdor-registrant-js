@@ -1,0 +1,52 @@
+.hidden {
+    display: none;
+}
+
+.registration {
+    flex: 1;
+}
+
+.logs {
+    flex: 1.5;
+}
+
+.horizontal-container {
+    display: flex;
+    /* Use flexbox layout */
+    /* Optionally, you can specify additional flex properties */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.spacer-horizontal {
+    margin-right: 20px;
+    /* Adjust the margin value to set the desired space */
+}
+
+.spacer-vertical {
+    margin-bottom: 20px;
+    /* Adjust the margin value to set the desired space */
+}
+
+.divider-horizontal {
+    border-top: 2px solid #e4e4e4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+body {
+    background-color: #f4f4f400;
+    padding: 20px;
+    background-image: url('https://img.freepik.com/free-vector/paper-style-white-monochrome-background_23-2148999281.jpg');
+    background-size: cover;
+}
+
+.pane {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
