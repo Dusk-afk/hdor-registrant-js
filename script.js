@@ -112,9 +112,7 @@ var Plan = /** @class */ (function () {
         this.name = name;
         this.tickets = tickets;
         this.referralCode = "HDOR0286007";
-        this.discountCode = tickets.every(function (ticket) { return ticket !== 1547; })
-            ? "FFRNE24"
-            : null;
+        this.discountCode = "FFRNE24";
     }
     Plan.prototype.generateTicketsListForInitiate = function () {
         if (this.tickets.every(function (ticket) { return ticket === 1547; })) {

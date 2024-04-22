@@ -89,9 +89,7 @@ class Plan {
     this.name = name;
     this.tickets = tickets;
     this.referralCode = "HDOR0286007";
-    this.discountCode = tickets.every((ticket) => ticket !== 1547)
-      ? "FFRNE24"
-      : null;
+    this.discountCode = "FFRNE24";
   }
 
   generateTicketsListForInitiate(): number[] {
